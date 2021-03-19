@@ -7,7 +7,7 @@ import java.util.Map;
  * For storage phone numbers of people
  */
 public class PhoneBook {
-    private HashMap<Integer, String> map = new HashMap<>();
+    private Map<Integer, String> map = new HashMap<>();
 
     public void add(String name, Integer number) {
         this.map.put(number, name);

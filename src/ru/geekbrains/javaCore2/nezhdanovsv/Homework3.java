@@ -49,8 +49,8 @@ public class Homework3 {
      * @param array - initial array
      * @return - Map collection, there a word is key and an quantity is value
      */
-    public static HashMap<String, Integer> uniqueWords(String[] array) {
-        HashMap<String, Integer> map = new HashMap<>();
+    public static Map<String, Integer> uniqueWords(String[] array) {
+        Map<String, Integer> map = new HashMap<>();
         for (String s : array) {
             if (!map.containsKey(s)) {
                 map.put(s, 1);
@@ -66,7 +66,7 @@ public class Homework3 {
      * Print a Map with quantity of words
      * @param map - initial Map
      */
-    public static void printMap(HashMap<String, Integer> map) {
+    public static void printMap(Map<String, Integer> map) {
         for (Map.Entry<String, Integer> pair : map.entrySet()) {
             System.out.println(pair.getKey() + " = " + pair.getValue());
         }
