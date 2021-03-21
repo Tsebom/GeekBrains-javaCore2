@@ -52,12 +52,13 @@ public class Homework3 {
     public static Map<String, Integer> uniqueWords(String[] array) {
         Map<String, Integer> map = new HashMap<>();
         for (String s : array) {
-            if (!map.containsKey(s)) {
-                map.put(s, 1);
-            }
-            else {
-                map.put(s, map.get(s) + 1);
-            }
+//            if (!map.containsKey(s)) {
+//                map.put(s, 1);
+//            }
+//            else {
+//                map.put(s, map.get(s) + 1);
+//            }
+            map.put(s, map.getOrDefault(s, 0) + 1);
         }
         return map;
     }
@@ -67,8 +68,9 @@ public class Homework3 {
      * @param map - initial Map
      */
     public static void printMap(Map<String, Integer> map) {
-        for (Map.Entry<String, Integer> pair : map.entrySet()) {
-            System.out.println(pair.getKey() + " = " + pair.getValue());
-        }
+//        for (Map.Entry<String, Integer> pair : map.entrySet()) {
+//            System.out.println(pair.getKey() + " = " + pair.getValue());
+//        }
+        map.forEach((k, v) -> System.out.println(k + " = " + v));
     }
 }
