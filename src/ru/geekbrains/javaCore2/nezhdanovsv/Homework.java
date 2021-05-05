@@ -1,13 +1,16 @@
 package ru.geekbrains.javaCore2.nezhdanovsv;
 
+import java.lang.reflect.Method;
+
 /**
- * Homework
+ * Homework8
  * @author Nezhdanov Sergei
  * @version 1.0
  */
 public class Homework {
 
     public static void main(String[] args) {
-	// write your code here
+        StartTest.start(TestClass.class);
+        StartTest.start("ru.geekbrains.javaCore2.nezhdanovsv.TestClass");
     }
 }
